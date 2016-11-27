@@ -12,17 +12,26 @@ var criarPessoa = function (nome, idade){
 //chamar funcao e elementos
 var produto = {nome: 'Sapato', preco:150};
 
+var criarProduto = function(nome, preco){
+    return{
+        nome: nome,
+        preco: preco
+    };
+};
+
+console.log(criarProduto("Mac", "9"));
+
 var formulaImpostoA = function(preco){return preco*0.1};
 
 var calcularPreco = function (produto, formulaImposto){
   return produto.preco + formulaImposto(produto.preco);
 }
-//console.log(calcularPreco(produto, formulaImpostoA));
+console.log(calcularPreco(produto, formulaImpostoA));
 
 // retornar uma funcao
 var helloWorld = function () {
   return function (){
-    return "Hello World!";
+    return "Retornando uma função";
   };
 };
 
@@ -83,7 +92,7 @@ var helloWorld = function (){
 };
 
 //para retorna o valor da funcao dentro de outra funcao é necessário evocar duas vezes a funcao, representado pelo duplo ()
-console.log (helloWorld()());
+//console.log (helloWorld()());
 
 
 //ARRAY -
